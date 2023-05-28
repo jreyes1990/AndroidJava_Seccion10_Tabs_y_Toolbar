@@ -1,10 +1,12 @@
-package com.example.seccion10_tabs_y_toolbar;
+package com.example.seccion10_tabs_y_toolbar.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
-import android.widget.Toolbar;
+import androidx.appcompat.widget.Toolbar;
+
+import com.example.seccion10_tabs_y_toolbar.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_main);
 
-    androidx.appcompat.widget.Toolbar myToolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
+    Toolbar myToolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(myToolbar);
   }
 
