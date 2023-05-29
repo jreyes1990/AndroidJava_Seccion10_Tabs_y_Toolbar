@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.Menu;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
@@ -36,16 +38,19 @@ public class MainActivity extends AppCompatActivity {
     tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
       @Override
       public void onTabSelected(TabLayout.Tab tab) {
+        Toast.makeText(MainActivity.this, "Selected -> "+ tab.getText(), Toast.LENGTH_SHORT).show();
         int position = tab.getPosition();
         viewPager.setCurrentItem(position);
       }
 
       @Override
       public void onTabUnselected(TabLayout.Tab tab) {
+        Toast.makeText(MainActivity.this, "Unselected -> "+ tab.getText(), Toast.LENGTH_SHORT).show();
       }
 
       @Override
       public void onTabReselected(TabLayout.Tab tab) {
+        Toast.makeText(MainActivity.this, "Reselected -> "+ tab.getText(), Toast.LENGTH_SHORT).show();
       }
     });
   }
